@@ -1,0 +1,80 @@
+/* Cutom animations */
+
+@keyframes fadeout{
+  0% { opacity:1; }
+  100% { opacity:0.75; }
+}
+
+@-webkit-keyframes fadeout{
+  0% { opacity:1; }
+  100% { opacity:0.75; }
+}
+
+/* FONTS */
+
+@font-face {
+  font-family: crops;
+  src: url(../fonts/crops-regular.ttf);
+}
+
+/* BASE HTML ELEMENTS */
+
+html {
+  color:#ffffff;
+}
+
+
+/* CLASSES */
+
+.nav-container {
+  font-size:20px;
+  font-weight: 100;
+  display:table;
+  margin: 25px auto;
+}
+
+.nav-1 {
+  list-style: none;
+  padding:0;
+}
+
+.nav-1 a.active {
+  opacity: .75;
+}
+
+.nav-1 li{
+  display:inline;
+  padding: 20px 25px;
+}
+
+.nav-1 a{
+  text-decoration: none;
+  color:#ffffff;
+}
+
+
+
+.nav-1 a:hover{
+  -webkit-animation: 1s ease 0s normal forwards 1 fadeout;
+  animation: .8s ease 0s normal forwards 1 fadeout;
+}
+
+
+.header-1 {
+  padding:25px 10px;
+  text-transform: uppercase;
+  font-family:crops;
+  font-size: 50px;
+  letter-spacing: 5px;
+  text-align:center;
+}
+
+.video-background {
+  z-index: -1000;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

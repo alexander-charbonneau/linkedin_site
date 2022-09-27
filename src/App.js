@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+// Library imports
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+
+// Style imports
+import './style/App.css';
+
+// Page imports
+import Home from "./pages/Home.tsx"
+import Contact from "./pages/Contact.tsx"
+
+// Componenet imports
+import Nav from "./components/Nav.tsx"
+
+// Media imports
+import Bg from "./videos/bg-1.mp4"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <>
+  <video className="video-background" src={Bg} autoPlay loop muted playsInline />
+    <Router>
+    <Nav />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
+  </>
   );
 }
 
