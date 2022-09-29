@@ -154,7 +154,6 @@
 html {
   color:#ffffff;
   overflow-y:hidden;
-  background-color: #3ab250;
 }
 
 input:focus, textarea:focus, select:focus{
@@ -207,7 +206,6 @@ input:focus, textarea:focus, select:focus{
 }
 
 .video-background {
-  opacity:.75;
   z-index: -1000;
   object-fit: cover;
   width: 100vw;
@@ -218,8 +216,14 @@ input:focus, textarea:focus, select:focus{
 }
 
 .body-wrapper {
-
+  position: absolute;
   height:100vh;
+  width:100vw;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
 }
 
 .crt-display {
@@ -237,20 +241,27 @@ input:focus, textarea:focus, select:focus{
 .typewriter-container {
   margin: 50px auto;
   width:600px;
+  text-align:center;
 }
 
 .terminal {
-  color:#e6e6e6;
+  background-image:url("../images/screen.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x:hidden;
+  border:2px solid #383838;
+  color:#10cf4e;
   font-family: 'Courier New';
-  font-size: "10px";
-  width:600px;
+  font-size: 12px;
+  width: 600px;
   margin: 0 auto;
+  border-radius: 4px;
 }
 
 .terminal-output {
-  margin:0;
+  margin:0 10px;
   padding-bottom:10px;
-  overflow-y: hidden;
+  overflow: hidden;
   display: flex;
   align-items: flex-end;
   height:200px;
@@ -259,18 +270,37 @@ input:focus, textarea:focus, select:focus{
 }
 
 .bash {
-  color:#e6e6e6;
+  color:#10cf4e;
+  font-family: 'Courier New';
+  font-size: 12px;
   background:rgba(0,0,0,0);
-  border: 0px solid #ffffff;
   white-space: nowrap;
   box-sizing: border-box;
-  display:inline-block;
-  width:100%
+  display:inline-flex;
+  width:100%;
+  animation: textShadow 1.6s infinite;
+  border: 0px solid #ffffff;
+}
+
+.input-bar{
+  vertical-align: middle;
+  height:25px;
+}
+
+.bash::after {
+  animation: flicker 0.15s infinite;
+}
+
+.bash::before {
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
 }
 
 .bash-prefix {
+  padding-left: 10px;
+  border-top:1px solid #383838;
   white-space: nowrap;
   box-sizing: border-box;
-  display:inline-block;
+  display:flex;
+  padding-top:5px;
 }
 
