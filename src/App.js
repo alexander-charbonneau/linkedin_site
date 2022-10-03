@@ -7,8 +7,8 @@ import {
 import './style/App.css';
 
 // Componenet imports
-import MaiRoutes from "./components/MaiRoutes.tsx"
-import Nav from "./components/Nav.tsx"
+import MaiRoutes from "./components/MaiRoutes"
+import Nav from "./components/Nav"
 
 // Media imports
 import Bg from "./videos/bg-1.mp4"

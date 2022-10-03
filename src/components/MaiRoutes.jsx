@@ -9,8 +9,8 @@ import {AnimatePresence} from "framer-motion"
 import KeepAlive from 'react-activation'
 
 // Page imports
-import Home from "../pages/Home.tsx"
-import Contact from "../pages/Contact.tsx"
+import Home from "../pages/Home"
+import Contact from "../pages/Contact"
 
 export default function MaiRoutes() {
 
